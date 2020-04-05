@@ -1,4 +1,7 @@
 {
+    "cinetpay/cinetpay-php": {
+        "version": "1.9.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {

@@ -1,0 +1,67 @@
+{# templates/includes/article_form.html.twig #}
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+<div class="row">
+<div class="input-field col s6 m6 l6">
+		{{ form_widget(form.title, {'attr': {'placeholder': 'Titre du business Plan'}}) }}
+		{{ form_label(form.title) }}
+		<span class="error">{{ form_errors(form.title) }}</span>
+</div>
+
+<div class="input-field col s6 m6 l6">
+		{{ form_widget(form.categories, {'attr': {'placeholder': 'categories du business Plan'}}) }}
+		{{ form_label(form.categories) }}
+		
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="input-field col s2 m2 l2">
+{{ form_label(form.description) }}
+		
+		
+</div>
+<div class="input-field col s10 m10 l10">
+
+		{{ form_widget(form.description, {'attr': {'placeholder': 'Description du business Plan'}}) }}
+		<span class="error">{{ form_errors(form.description) }}</span>
+</div>
+</div>
+
+<div class="row">
+
+<div class="input-field col s2 m2 l2">
+		
+		{{ form_label(form.picture) }}
+</div>
+<div class="input-field col s4 m4 l4">
+		{{ form_widget(form.picture, {'attr': {'placeholder': 'Image du business Plan'}}) }}
+		<span class="error">{{ form_errors(form.picture) }}</span>
+</div>
+
+<div class="input-field col s2 m2 l2">
+		
+		{{ form_label(form.file) }}
+</div>
+<div class="input-field col s4 m4 l4">
+		{{ form_widget(form.file) }}
+		<span class="error">{{ form_errors(form.file) }}</span>
+	
+</div>
+</div>
+
+<div class="input-field col s6 m6 l6">
+		{{ form_widget(form.price, {'attr': {'placeholder': 'Prix du business Plan'}}) }}
+		{{ form_label(form.price) }}
+		<span class="error">{{ form_errors(form.price) }}</span>
+</div>
+
+<div class="input-field col s12 m12 l12">
+		<input type="submit" name="" value="Enregistrer" class="btn btn-primary">
+	</div>
+
+
+
+{{ form_end(form) }}

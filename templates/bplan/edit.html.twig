@@ -1,0 +1,18 @@
+{# templates/bplan/edit.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} | Ajouter un article{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<h4>Modifier le Business Plan {{ bplan.title }}</h4>
+				{% if bplan.picture is not null %}
+                    <img width="300" src="{{ asset('uploads/' ~ bplan.picture) }}">
+                {% endif %}
+			</div>
+		</div>
+		{% include "includes/article_form.html.twig" %}
+	</div>
+{% endblock %}
